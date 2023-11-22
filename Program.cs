@@ -15,7 +15,7 @@ void CreateArray(string[] stringArray)
 {
     for(int i = 0; i < stringArray.Length; i++)
     {
-        System.Console.WriteLine($"Введите {i + 1}-ый эллемент массива");
+        System.Console.Write($"Введите {i + 1}-ый эллемент массива: ");
         stringArray[i] = Console.ReadLine();
     }
 }
@@ -45,15 +45,18 @@ string[] ArraySorted(string[] stringArray)
 
 void PrintArray(string[] stringArray)
 {
-    System.Console.WriteLine("[");
+    System.Console.Write("[");
     for(int i = 0; i < stringArray.Length; i++)
     {
-        System.Console.WriteLine($"'{stringArray[i]}',");
+        System.Console.Write($"'{stringArray[i]}',");
     }
-    System.Console.WriteLine("]");
+    System.Console.Write("]");
 }
 
 
-System.Console.WriteLine("Введите количество эллементов массива: ");
+System.Console.Write("Введите количество эллементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 string[] stringArray = new string[n];
+
+CreateArray(stringArray);
+PrintArray(ArraySorted(stringArray));
