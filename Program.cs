@@ -24,3 +24,26 @@ void CreateArray(string[] stringArray)
     }
 }
 
+string[] ArraySorted(string[] stringArray)
+{
+    int m = 0;
+    for(int i = 0; i < stringArray.Length; i++)
+    {
+        if(stringArray[i].Length <= 3)
+        {
+            m++;
+        }
+    }
+    string[] rezArray = new string[m];
+    int k = 0;
+    for(int i = 0; i < stringArray.Length; i++)
+    {
+        if(stringArray[i].Length <= 3)
+        {
+            rezArray[k] = stringArray[i];
+            k++;
+        }
+    }
+    return rezArray;
+}
+
