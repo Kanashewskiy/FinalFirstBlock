@@ -11,10 +11,6 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
-System.Console.WriteLine("Введите количество эллементов массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-string[] stringArray = new string[n];
-
 void CreateArray(string[] stringArray)
 {
     for(int i = 0; i < stringArray.Length; i++)
@@ -47,3 +43,17 @@ string[] ArraySorted(string[] stringArray)
     return rezArray;
 }
 
+void PrintArray(string[] stringArray)
+{
+    System.Console.WriteLine("[");
+    for(int i = 0; i < stringArray.Length; i++)
+    {
+        System.Console.WriteLine($"'{stringArray[i]}',");
+    }
+    System.Console.WriteLine("]");
+}
+
+
+System.Console.WriteLine("Введите количество эллементов массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+string[] stringArray = new string[n];
